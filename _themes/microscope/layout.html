@@ -1,0 +1,155 @@
+{#-
+  Copyright (C) 2020 David Miguel Susano Pinto <david.pinto@bioch.ox.ac.uk>
+
+  This work is licensed under the Creative Commons
+  Attribution-ShareAlike 4.0 International License.  To view a copy of
+  this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+
+  This is the Sphinx theme for the Python Microscope package.  It is
+  heavily based on the https://www.gtk.org website authored by "The
+  GTK Team".  The gkt website source code is available at
+  https://gitlab.gnome.org/Infrastructure/gtk-web and is licensed
+  under Creative Commons Attribution-ShareAlike 4.0.
+-#}
+{%- extends "basic/layout.html" %}
+
+{%- set metatags %}
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="David Miguel Susano Pinto">
+    <meta name="description" content="{{ description }}">
+    <meta name="generator" content="sphinx">
+{% endset %}
+
+{#- Fix this to get scripts and styles from parent, this breaks search #}
+{%- block css %}
+    <!-- TODO: icons -->
+    <link rel="stylesheet"
+          href="{{ pathto('_static/bootstrap.min.css', 1) }}"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+          crossorigin="anonymous">
+
+    <!-- TODO: check parent with pygments -->
+    {{- css() }}
+
+    <!-- JS, Popper.js, and jQuery (not css but needed by bootstrap css) -->
+    <!-- Not sure we need this jquery since it seems that sphinx base
+         theme already injects one version of it -->
+    <script src="{{ pathto('_static/jquery.slim.min.js', 1) }}"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="{{ pathto('_static/bootstrap.bundle.min.js', 1) }}"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+{%- endblock %}
+
+{%- block header %}
+    <!-- TODO: get a better background image for the landing. -->
+    <header class="container"
+  {%- if haslanding %}
+            style="background-image: url('_static/optical-table-darken.jpg'); background-position: center;"
+  {%- endif %}
+            >
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <button class="navbar-toggler bg-white" type="button"
+                data-toggle="collapse" data-target="navbar-menu"
+                aria-controls="navbar-menu" aria-expanded="false"
+                aria-label="Toggle navigation menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- TODO: make this link relative -->
+        <a class="navbar-brand" href="/software/microscope/">
+          <div class="container">
+            <div class="row">
+              <!-- TODO: create an icon -->
+              <!-- <div class="col-sm pr-0"> -->
+              <!--   <img src="{{ pathto('_static/' + logo, 1) }}" -->
+              <!--        alt="Python Microscope logo" -->
+              <!--        class="d-inline-block align-middle" height="60"> -->
+              <!-- </div> -->
+              <div class="col-sm pl-0 {% if haslanding %}text-white{% endif %}">
+                <strong>Python</br>Microscope</strong>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link {% if haslanding %}text-white{% endif %}"
+               href="/software/microscope/doc">Documentation</a>
+            <a class="nav-link {% if haslanding %}text-white{% endif %}"
+               href="https://forum.image.sc/">Get Help</a>
+            <a class="nav-link {% if haslanding %}text-white{% endif %}"
+               href="https://github.com/python-microscope/microscope">Code</a>
+            <a class="nav-link {% if haslanding %}text-white{% endif %}"
+               href="/software/microscope/about.html">About Us</a>
+          </div>
+        </div>
+      </nav>
+  {%- block landing %}
+  {%- endblock %}
+    </header>
+{%- endblock %}
+
+{%- block relbar1 %}
+{%- endblock %}
+{%- block relbar2 %}
+{%- endblock %}
+
+{%- block content %}
+  {%- if pagename.startswith('doc') %}
+    <div class="container py-4">
+      <div class="row">
+        {%- include "doc-nav.html" %}
+        <main class="col">
+          {{ body }}
+        </main>
+      </div>
+    </div>
+  {%- else %}
+    <main class="container py-4">
+      {{ body }}
+    </main>
+  {%- endif %}
+{%- endblock %}
+
+{%- block footer %}
+    <footer class="container-fluid bg-dark navbar-dark text-muted py-4 small">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <p>
+              <img class="img-fluid" alt="Microscope logo"
+                   src="{{ pathto('_static/' + logo, 1) }}">
+            </p>
+  {%- if show_copyright %}
+            <p>
+              <a rel="license"
+                 href="http://creativecommons.org/licenses/by-sa/4.0/">
+                <img alt="Creative Commons Attribution-ShareAlike License"
+                     src="{{ pathto('_static/cc-by-sa-80x15.png', 1) }}">
+              </a>
+            </p>
+  {%- endif %}
+          </div>
+          <div class="col-8">
+            <div class="d-flex">
+              {%- for section_title, section_contents in footer_links.items() %}
+                <div class="col pl-0">
+                  <h6 class="text-muted">{{ section_title }}</h6>
+                  <ul class="list-unstyled text-small">
+                    {%- for footer_link in section_contents %}
+                      <li>
+                        <a href="{{ footer_link[0] }}"
+                           class="text-light">{{ footer_link[1] }}
+                        </a>
+                      </li>
+                    {%- endfor %}
+                  </ul>
+                </div>
+              {%- endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+{%- endblock %}

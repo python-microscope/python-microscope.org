@@ -1,0 +1,37 @@
+/*
+  Copyright (C) 2020 David Miguel Susano Pinto <david.pinto@bioch.ox.ac.uk>
+
+  This work is licensed under the Creative Commons
+  Attribution-ShareAlike 4.0 International License.  To view a copy of
+  this license, visit http://creativecommons.org/licenses/by-sa/4.0/.
+*/
+
+@import url("basic.css");
+
+/*
+  bootstrap styles clashes with pygments style.  This is particularly
+  noticeable when using a pygments style with dark background such as
+  monokai on a bash code block (the text remain black).  See
+  https://alcidanalytics.com/p/pygments-bootstrap-css-conflict and
+  https://stackoverflow.com/questions/34319981/pygments-bootstrap-highlight-shell-code-with-dark-background
+*/
+.highlight pre {
+    white-space: pre;
+    border-radius: inherit;
+    display: inherit;
+    background-color: inherit;
+    border: inherit;
+    color: inherit;
+}
+
+/* block from sphinx.ext.todo */
+div.admonition {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2px 7px 1px 7px;
+  border-left: 0.2em solid black;
+}
+p.admonition-title {
+  margin: 0px 10px 5px 0px;
+  font-weight: bold;
+}

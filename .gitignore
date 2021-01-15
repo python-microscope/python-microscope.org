@@ -1,0 +1,7 @@
+# Sphinx output
+/_build
+
+# Yarn getting 3rd party dependencies
+/node_modules
+/yarn.lock
+/package.json

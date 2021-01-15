@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="46.228001mm"
+   height="35.813999mm"
+   viewBox="0 0 46.228001 35.813999"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="icon.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="126.19778"
+     inkscape:cy="70.503334"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-18.538903,-134.69715)">
+    <path
+       inkscape:connector-curvature="0"
+       id="path908"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.79999924px;line-height:1.25;font-family:'Asana Math';-inkscape-font-specification:'Asana Math';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       d="m 54.911703,163.75475 c 0,4.0132 -0.2032,4.3688 -2.5908,4.572 l -1.7272,0.1524 v 1.524 c 2.3368,-0.1016 3.8608,-0.1524 6.5024,-0.1524 2.8448,0 4.6736,0.0508 7.6708,0.1524 v -1.524 l -2.4384,-0.1524 c -2.3368,-0.1524 -2.5908,-0.5588 -2.5908,-4.572 v -22.8092 c 0,-3.9624 0.254,-4.4196 2.5908,-4.572 l 2.1336,-0.1524 v -1.524 c -3.8608,0.1524 -3.8608,0.1524 -4.7244,0.1524 -0.762,0 -0.762,0 -4.826,-0.1524 l -13.3096,28.2448 -13.4112,-28.2448 c -4.064,0.1524 -4.064,0.1524 -4.826,0.1524 -0.762,0 -0.762,0 -4.826,-0.1524 v 1.524 l 2.2352,0.1524 c 2.3368,0.1524 2.5908,0.6096 2.5908,4.572 v 22.8092 c 0,3.9624 -0.254,4.4196 -2.5908,4.572 l -2.2352,0.1524 v 1.524 c 5.0292,-0.1524 5.0292,-0.1524 5.8928,-0.1524 0.762,0 0.762,0 6.096,0.1524 v -1.524 l -2.2352,-0.1524 c -2.3368,-0.1524 -2.5908,-0.6096 -2.5908,-4.572 v -23.2664 l 14.1732,30.0228 h 1.016 l 14.0208,-30.0228 z" />
+  </g>
+</svg>

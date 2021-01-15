@@ -1,0 +1,47 @@
+{%- extends "layout.html" %}
+{%- set haslanding = true %}
+
+{#- If we don't, then title would be " - Python Microscope" #}
+{%- block htmltitle %}
+  <title>{{ docstitle }}</title>
+{%- endblock %}
+
+{%- block landing %}
+      <div class="row">
+        <div class="col-md-6 d-flex justify-content-center flex-column main-heading text-white">
+          <h1 class="display-4 mb-3 text-nowrap text-monospace text-shadow">
+            import microscope
+          </h1>
+          <span class="text-light mb-4 text-shadow ">
+            <p>
+              Microscope is a Python package for the control of
+              microscope devices.  It is the fastest and easiest
+              method to incorporate image analysis as part of a
+              microscope experiment.
+            </p>
+          </span>
+          <div class="mb-4 d-flex">
+            <a href="doc" class="btn btn-primary" role="button">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+{%- endblock %}
+
+{%- set body %}
+  <div class="row row-cols-1 row-cols-md-3">
+    {%- for card in home_cards %}
+      <div class="col-sm-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ card[0] }}</h5>
+            <p class="card-text font-weight-light">
+              {{ card[1] }}
+            </p>
+          </div>
+        </div>
+      </div>
+    {%- endfor %}
+  </div>
+{%- endset %}

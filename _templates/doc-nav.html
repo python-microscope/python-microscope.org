@@ -1,0 +1,28 @@
+{#
+  FIXME: this is dependent on a doc_structure defined somewhere.  At
+  the moment we are defining it on conf.py but really we should be
+  reading this from the master_doc tree somehow.
+#}
+<nav class="col-md-auto text-break bg-white p-0 pt-2 h-100"
+     aria-label="Documentation navigation">
+  <ul class="list-group">
+    {%- for doc_level1 in doc_structure %}
+      <li class="list-group-item border-0 group-header pb-2">
+        <a href="/software/microscope/doc/{{ doc_level1[0] }}"
+           class="text-dark">
+          <img class="img-fluid align-middle" alt="{{ doc_level1[1] }} icon"
+               src="{{ pathto(doc_level1[2], 1) }}">
+          <strong>{{ doc_level1[1] }}</strong>
+        </a>
+        <ul class="list-group">
+          {%- for doc_level2 in doc_level1[3] %}
+          <a href="/software/microscope/doc/{{ doc_level2[0] }}"
+             class="text-muted">
+            <li class="list-group-item border-0 p-0 py-1 pl-3">{{ doc_level2[1] }}</li>
+          </a>
+          {%- endfor %}
+        </ul>
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>

@@ -1,0 +1,8 @@
+This is the code for the site at python-microscope.org.  It includes
+the shinx template, theme, and art but little of its actual content.
+The real documentation content is mostly on the python microscope
+repository.
+
+This site is heavily based on the gtk.org site by The GTK Team which
+is under the Creative Commons Attribution-ShareAlike 4.0 International
+Public License.
