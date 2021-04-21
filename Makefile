@@ -9,6 +9,7 @@ SPHINX_BUILD ?= sphinx-build
 SPHINX_APIDOC ?= sphinx-apidoc
 YARN ?= yarn
 RSYNC ?= rsync
+INKSCAPE ?= inkscape
 
 # Use the submodules by default but make it possible to link to a
 # local clone or whatever.
@@ -50,6 +51,11 @@ help:
 	@echo '   make html'
 	@echo '   make publish'
 
+
+_static/microscope-logo-96-dpi.png: _static/microscope-logo.svg
+	inkscape --file $< \
+	    --export-dpi 96 \
+	    --export-png $@
 
 html: api-doc
 	${SPHINX_BUILD} -c ${CONF_DIR} -b html ${SOURCE_DIR} ${BUILD_DIR}
