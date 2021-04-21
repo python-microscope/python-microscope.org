@@ -71,7 +71,7 @@ sync-doc:
 	    --recursive \
 	    --delete \
 	    "$(MICROSCOPE_SRC)/doc/" "$(DOC_DIR)"
-	cp "$(MICROSCOPE_SRC)/NEWS" "$(DOC_DIR)/../NEWS"
+	cp "$(MICROSCOPE_SRC)/NEWS.rst" "$(DOC_DIR)/../NEWS.rst"
 
 third-parties:
 	$(YARN) add bootstrap@4.5.3
@@ -79,7 +79,7 @@ third-parties:
 	$(YARN) add jquery@3.5.1
 
 clean:
-	$(RM) "$(DOC_DIR)/../NEWS"
+	$(RM) "$(DOC_DIR)/../NEWS.rst"
 	$(RM) -r \
 	    "$(BUILD_DIR)" \
 	    "$(APIDOC_DIR)" \
