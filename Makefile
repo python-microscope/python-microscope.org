@@ -51,7 +51,7 @@ help:
 	@echo '   make publish'
 
 
-html: apidoc
+html: api-doc
 	${SPHINX_BUILD} -c ${CONF_DIR} -b html ${SOURCE_DIR} ${BUILD_DIR}
 
 api-doc:
