@@ -160,7 +160,7 @@ html_context = {
             [
                 ("get-involved/dev-install.html", "Development Installation"),
                 ("get-involved/hacking.html", "Contributing"),
-#                ("get-involved/new-device.html", ""),
+                ("get-involved/new-device.html", "New Device"),
             ],
         ),
         ("authors.html", "Authors", "_static/people.svg", [],),
