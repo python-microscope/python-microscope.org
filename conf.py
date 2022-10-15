@@ -167,15 +167,15 @@ html_context = {
     ],
     "footer_links": {
         "PROJECT": [
-            ("/software/microscope/about.html", "About Us"),
-            ("/software/microscope/cite.html", "Cite Us"),
+            ("/about.html", "About Us"),
+            ("/cite.html", "Cite Us"),
             ("https://github.com/python-microscope/microscope", "Code"),
-            ("/software/microscope/doc/news.html", "NEWS"),
+            ("/doc/news.html", "NEWS"),
         ],
         "SUPPORT": [
-            ("/software/microscope/doc/architecture/supported-devices.html", "Supported Devices"),
-            ("/software/microscope/doc", "Documentation"),
-            ("/software/microscope/doc/install.html", "Install"),
+            ("/doc/architecture/supported-devices.html", "Supported Devices"),
+            ("/doc", "Documentation"),
+            ("/doc/install.html", "Install"),
             (
                 # Link to "issues" and not "issues/new" because if the
                 # user is not logged in on github or does not have a
@@ -191,7 +191,7 @@ html_context = {
                 "https://webchat.freenode.net/?channels=#python-microscope",
                 "#python-microscope",
             ),
-            ("/software/microscope/related-projects.html", "Related Projects"),
+            ("/related-projects.html", "Related Projects"),
         ],
     },
 }

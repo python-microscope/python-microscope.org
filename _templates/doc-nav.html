@@ -8,7 +8,7 @@
   <ul class="list-group">
     {%- for doc_level1 in doc_structure %}
       <li class="list-group-item border-0 group-header pb-2">
-        <a href="/software/microscope/doc/{{ doc_level1[0] }}"
+        <a href="/doc/{{ doc_level1[0] }}"
            class="text-dark">
           <img class="img-fluid align-middle" alt="{{ doc_level1[1] }} icon"
                src="{{ pathto(doc_level1[2], 1) }}">
@@ -16,7 +16,7 @@
         </a>
         <ul class="list-group">
           {%- for doc_level2 in doc_level1[3] %}
-          <a href="/software/microscope/doc/{{ doc_level2[0] }}"
+          <a href="/doc/{{ doc_level2[0] }}"
              class="text-muted">
             <li class="list-group-item border-0 p-0 py-1 pl-3">{{ doc_level2[1] }}</li>
           </a>
