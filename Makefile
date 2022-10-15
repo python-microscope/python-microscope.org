@@ -102,7 +102,7 @@ _static/microscope-logo-96-dpi.png: _static/microscope-logo.svg
 	    --export-png $@
 
 
-html: api-doc sync-doc $(THIRD_PARTY_FILES_ONE)
+html: sync-doc api-doc $(THIRD_PARTY_FILES_ONE)
 	${SPHINX_BUILD} -c ${CONF_DIR} -b html ${SOURCE_DIR} ${BUILD_DIR}
 
 
@@ -121,7 +121,6 @@ api-doc:
 sync-doc:
 	$(RSYNC) \
 	    --recursive \
-	    --delete \
 	    "$(MICROSCOPE_SRC)/doc/" "$(DOC_DIR)"
 	cp "$(MICROSCOPE_SRC)/NEWS.rst" "$(DOC_DIR)/../NEWS.rst"
 
