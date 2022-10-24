@@ -46,7 +46,7 @@ help:
 	@echo 'Most likely, just do:'
 	@echo ''
 	@echo '   make html'
-	@echo '   make serve'
+	@echo '   make server'
 	@echo ''
 	@echo 'If you want to update the Microscope source repo'
 	@echo ''
