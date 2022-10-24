@@ -187,10 +187,6 @@ html_context = {
         ],
         "COMMUNITY": [
             ("https://forum.image.sc/", "Forum"),
-            (
-                "https://webchat.freenode.net/?channels=#python-microscope",
-                "#python-microscope",
-            ),
             ("/related-projects.html", "Related Projects"),
         ],
     },
