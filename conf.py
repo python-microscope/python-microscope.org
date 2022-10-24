@@ -13,6 +13,12 @@ master_doc = "doc/index"
 language = "en"
 nitpicky = True
 
+exclude_patterns = [
+    # NEWS.rst file is included from `doc/news.rst` and we don't
+    # actually want to build it.
+    "NEWS.rst",
+]
+
 templates_path = ["_templates"]
 
 extensions = [
@@ -187,10 +193,7 @@ html_context = {
         ],
         "COMMUNITY": [
             ("https://forum.image.sc/", "Forum"),
-            (
-                "https://webchat.freenode.net/?channels=#python-microscope",
-                "#python-microscope",
-            ),
+            ("/meetings.html", "Meetings"),
             ("/related-projects.html", "Related Projects"),
         ],
     },

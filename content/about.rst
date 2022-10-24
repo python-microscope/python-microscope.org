@@ -24,5 +24,6 @@ interface for the control of bespoke microscopes.
 Funding
 =======
 
-Development of Microscope at Micron is supported by the Wellcome Trust
-Strategic Award 107457/Z/15/Z to Prof. Ilan Davis.
+Development of Microscope at Micron was supported by the Wellcome
+Trust Strategic Award 107457/Z/15/Z to Prof. Ilan Davis between 2016
+and 2021.

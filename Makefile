@@ -46,7 +46,7 @@ help:
 	@echo 'Most likely, just do:'
 	@echo ''
 	@echo '   make html'
-	@echo '   make serve'
+	@echo '   make server'
 	@echo ''
 	@echo 'If you want to update the Microscope source repo'
 	@echo ''
@@ -105,7 +105,6 @@ _static/microscope-logo-96-dpi.png: _static/microscope-logo.svg
 html: sync-doc api-doc $(THIRD_PARTY_FILES_ONE)
 	${SPHINX_BUILD} -c ${CONF_DIR} -b html ${SOURCE_DIR} ${BUILD_DIR}
 
-
 api-doc:
 	${SPHINX_APIDOC} \
 	    --force --separate --module-first \
@@ -118,6 +117,8 @@ api-doc:
 	    ${MICROSCOPE_SRC}/microscope/lasers/*.py \
 	    ${MICROSCOPE_SRC}/microscope/deviceserver.py
 
+# We copy doc/ where the documentation is but also need to copy the
+# NEWS file which is `include::` from doc/news.rst
 sync-doc:
 	$(RSYNC) \
 	    --recursive \
