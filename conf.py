@@ -187,6 +187,7 @@ html_context = {
         ],
         "COMMUNITY": [
             ("https://forum.image.sc/", "Forum"),
+            ("/meetings.html", "Meetings"),
             ("/related-projects.html", "Related Projects"),
         ],
     },
