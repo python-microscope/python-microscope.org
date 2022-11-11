@@ -13,9 +13,9 @@ publications.  The paper describing Microscope is available `online
 <https://doi.org/10.1242/jcs.258955>`_ and
 can be cited as:
 
- David Miguel Susano Pinto, Mick A. Phillips, Nicholas Hall, Julio
- Mateos-Langerak, Danail Stoychev, Tiago Susano Pinto, Martin J. Booth,
- Ilan Davis, Ian M. Dobbie; Python-Microscope – a new open-source
- Python library for the control of microscopes. J Cell Sci 1 October
- 2021; 134 (19): jcs258955. doi: https://doi.org/10.1242/jcs.258955
-
+    David Miguel Susano Pinto, Mick A. Phillips, Nicholas Hall, Julio
+    Mateos-Langerak, Danail Stoychev, Tiago Susano Pinto,
+    Martin J. Booth, Ilan Davis, Ian M. Dobbie; Python-Microscope – a
+    new open-source Python library for the control of microscopes. J
+    Cell Sci 1 October 2021; 134 (19): jcs258955. doi:
+    https://doi.org/10.1242/jcs.258955
