@@ -42,18 +42,6 @@ help:
 	@echo ''
 	@echo 'Variables:'
 	@echo '   MICROSCOPE_SRC    path for python-microscope repo'
-	@echo ''
-	@echo 'Most likely, just do:'
-	@echo ''
-	@echo '   make html'
-	@echo '   make server'
-	@echo ''
-	@echo 'If you want to update the Microscope source repo'
-	@echo ''
-	@echo '   cd src/'
-	@echo '   git pull --ff-only origin master'
-	@echo '   cd ..'
-	@echo '   git commit src -m "src: update python-microscope submodule"'
 
 
 BOOTSTRAP_ICONS_FILES = \

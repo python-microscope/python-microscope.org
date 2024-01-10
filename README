@@ -1,7 +1,55 @@
+# python-microscope.org
+
 This is the code for the site at python-microscope.org.  It includes
 the shinx template, theme, and art but little of its actual content.
 The real documentation content is mostly on the python microscope
 repository.
+
+
+## Building
+
+There is a `Makefile` to simplify things.  Most likely, you will want
+to do:
+
+    make clean
+    make html
+    make server
+
+
+## Update python-microscope submodule
+
+Most of the website content is actually the docs that are part of the
+microscope package itself.  That package is developed on a separate
+repo and is used here through the pain of [git
+submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+
+By default, git pull will not automatically pull changes to the
+submodules.  You may see references to "Submodules changed but not
+updated" in te output of `git status`.  If you pull the main
+repository, you will also need to run `git submodule update`.
+Alternatively, set git to do this automatically on this repo with:
+
+    git config pull.submodule.recurse true
+
+If you want to update the version of Microscope that is being used to
+build the website:
+
+    git checkout main
+    cd src
+    git pull --ff-only origin master
+    cd ..
+    git commit -m 'src: update python-microscope submodule' src/
+
+
+## Deployment
+
+The live website is deployed from the `netlify` branch with Netlify.
+The deployment is not automatic to avoid going over the free tier
+limits.  David needs to trigger it manually so ask him if you want to
+update the website.
+
+
+## Inspiration
 
 This site is heavily based on the gtk.org site by The GTK Team which
 is under the Creative Commons Attribution-ShareAlike 4.0 International
