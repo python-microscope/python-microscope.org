@@ -12,15 +12,16 @@ development or just consider using it on your project, you are welcome
 to join our community meetings.
 
 We hold monthly meetings on the second Tuesday of each month at `17:00
-UTC <https://savvytime.com/converter/utc>`__.  The meetings are public
-and held on Zoom in the recurring meeting ID `939 8949 9199
-<https://zoom.us/j/93989499199>`__.  Notes from all the meetings are
-the made published publicly at
+London time
+<https://savvytime.com/converter/united-kingdom-london>`__.  The
+meetings are public and held on Zoom in the recurring meeting ID `939
+8949 9199 <https://zoom.us/j/93989499199>`__.  Notes from all the
+meetings are the made published publicly at
 `https://github.com/python-microscope/meetings
 <https://github.com/python-microscope/meetings>`__.
 
 Next meetings:
 
-- 8th November, 2022 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
-- 13th December, 2022 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
-- 10th January, 2023 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
+- 13th February, 2024 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
+- 12th March, 2024 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
+- 9th April, 2024 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
