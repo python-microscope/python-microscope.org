@@ -192,7 +192,7 @@ html_context = {
             ),
         ],
         "COMMUNITY": [
-            ("https://forum.image.sc/", "Forum"),
+            ("https://forum.image.sc/tag/python-microscope", "Forum"),
             ("/meetings.html", "Meetings"),
             ("/related-projects.html", "Related Projects"),
         ],
