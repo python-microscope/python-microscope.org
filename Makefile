@@ -93,17 +93,23 @@ _static/microscope-logo-96-dpi.png: _static/microscope-logo.svg
 html: sync-doc api-doc $(THIRD_PARTY_FILES_ONE)
 	${SPHINX_BUILD} -c ${CONF_DIR} -b html ${SOURCE_DIR} ${BUILD_DIR}
 
+
+# This command is duplicated from what's in microscope/setup.py
 api-doc:
 	${SPHINX_APIDOC} \
 	    --force --separate --module-first \
 	    --tocfile index \
 	    --output-dir $(APIDOC_DIR) \
 	    ${MICROSCOPE_SRC}/microscope \
-	    ${MICROSCOPE_SRC}/microscope/win32.py \
-	    ${MICROSCOPE_SRC}/microscope/testsuite/*.py \
+	    ${MICROSCOPE_SRC}/microscope/_wrappers/ \
+	    ${MICROSCOPE_SRC}/microscope/cameras/_SDK3.py \
+	    ${MICROSCOPE_SRC}/microscope/cameras/_SDK3Cam.py \
 	    ${MICROSCOPE_SRC}/microscope/devices.py \
-	    ${MICROSCOPE_SRC}/microscope/lasers/*.py \
-	    ${MICROSCOPE_SRC}/microscope/deviceserver.py
+	    ${MICROSCOPE_SRC}/microscope/deviceserver.py \
+	    ${MICROSCOPE_SRC}/microscope/lasers/ \
+	    ${MICROSCOPE_SRC}/microscope/testsuite/ \
+	    ${MICROSCOPE_SRC}/microscope/win32.py
+
 
 # We copy doc/ where the documentation is but also need to copy the
 # NEWS file which is `include::` from doc/news.rst
