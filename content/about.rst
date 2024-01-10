@@ -17,7 +17,7 @@ History
 Development of Microscope started in 2016 at the University of Oxford
 `Micron Bioimaging Unit <https://www.micron.ox.ac.uk>`_.  Development
 was initially guided to support development of a new version of `Cockpit
-<https://www.micron.ox.ac.uk/software/cockpit/>`_, a graphical user
+<https://microscope-cockpit.org>`_, a graphical user
 interface for the control of bespoke microscopes.
 
 
