@@ -1,0 +1,76 @@
+// Copyright (C) 2024 David Miguel Susano Pinto <carandraug+dev@gmail.com>
+//
+// Licensed under the Apache License, Version 2.0 (the "License"); you
+// may not use this file except in compliance with the License.  You
+// may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+// implied.  See the License for the specific language governing
+// permissions and limitations under the License.
+
+// Converting dates between timezones/cities, particularly dates in
+// the future, is very tricky in Javascript.  I guess the following
+// works because we only care about the meeting dates which are week
+// days during the day hours where we don't have to worry about
+// daylight savings changes.
+
+
+// Return Date for the start of (midnight) second Tuesday of a month.
+function second_tuesday_of(year, month) {
+    // Go to start of next week (8th day of the month), and then find
+    // the next Tuesday (day 2 of the week).  Note that the second
+    // Tuesday may be the 8th day of the month.
+    const day8 = new Date(Date.UTC(year, month, 8));
+    const tuesday2 = day8.getDate() + (2 + 7 - day8.getDay()) % 7;
+    return new Date(Date.UTC(year, month, tuesday2));
+}
+
+
+// Convert 'date' from current timezone to "Europe/London" timezone.
+function to_london_time (date) {
+    // "sv" locale => "yyyy-mm-dd hh:mm:ss" so split with "-", " ", and ":"
+    const sv_date = date.toLocaleString("sv", {timeZone: "Europe/London"});
+    const date_parts = sv_date.split(/[- :]/).map(Number);
+    date_parts[1] -= 1;  // convert month to zero-based numbering
+    return new Date(...date_parts);
+}
+
+
+// Convert 'date' from "Europe/London" timezone to current timezone.
+function from_london_to_local_time(date) {
+    const local_day = new Date(date.getFullYear(), date.getMonth(), date.getDay(), 0, 0, 0);
+    const london_day = to_london_time(local_day);
+    const time_offset = london_day - local_day;
+    return new Date(date - time_offset);
+}
+
+
+// Get dates of upcoming Microscope development meetings.
+function upcoming_meetings_str() {
+    const upcoming_meetings = [];
+
+    const london_now = to_london_time(new Date());;
+    const hour_length = 1000 * 60 * 60;  // in milliseconds
+    for (let i = 0; i < 5; i++) {
+        const meeting_time = second_tuesday_of(london_now.getFullYear(), london_now.getMonth() + i);
+        meeting_time.setUTCHours(17);  // meeting starts at 17:00
+        if ((meeting_time.valueOf() + hour_length) < london_now.valueOf())
+            continue;  // this may happen in the first month
+
+        upcoming_meetings.push(from_london_to_local_time(meeting_time));
+    }
+
+    const upcoming_meetings_str = [];
+    for (let date of upcoming_meetings) {
+        // If we use 'toLocaleString' it will adjust hours with future
+        // daylight savings changes.  So we use 'toUTCString' which always
+        // returns format "Www, dd Mmm yyyy hh:mm:ss GMT".  We slice(0, 7)
+        // to get "Www, dd Mmm yyyy hh:mm"
+        upcoming_meetings_str.push(date.toUTCString().slice(0, -7));
+    }
+    return upcoming_meetings_str;
+}

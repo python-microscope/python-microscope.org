@@ -20,8 +20,27 @@ meetings are the made published publicly at
 `https://github.com/python-microscope/meetings
 <https://github.com/python-microscope/meetings>`__.
 
-Next meetings:
+Next meetings (on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__):
 
-- 13th February, 2024 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
-- 12th March, 2024 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
-- 9th April, 2024 on Zoom `939 8949 9199 <https://zoom.us/j/93989499199>`__
+.. raw:: html
+
+    <ul id="upcoming-meetings" class="simple">
+    </ul>
+    <noscript>
+        <p>
+            Javascript is used here to list the upcoming meeting days
+            and times on your current timezone.  Javascript is either
+            disabled or not supported in your browser.  Either way, we
+            assume you're capable to calculate that yourself.
+        </p>
+    </noscript>
+    <script>
+        // 'upcoming_meetings_str' is defined in
+        // '_themes/microscope/static/microscope.js_t'
+        const ul = document.querySelector("ul#upcoming-meetings");
+        for (let upcoming_meeting of upcoming_meetings_str()) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(upcoming_meeting));
+            ul.appendChild(li);
+        }
+    </script>
