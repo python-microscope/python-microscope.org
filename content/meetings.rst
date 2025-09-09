@@ -11,7 +11,7 @@ If you are interested in Microscope, whether to get involved on its
 development or just consider using it on your project, you are welcome
 to join our community meetings.
 
-We hold monthly meetings on the second Tuesday of each month at `17:00
+We hold monthly meetings on the second Tuesday of each month at `16:00
 London time
 <https://savvytime.com/converter/united-kingdom-london>`__.  The
 meetings are public and held on Zoom in the recurring meeting ID `939

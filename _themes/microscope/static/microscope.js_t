@@ -57,7 +57,7 @@ function upcoming_meetings_str() {
     const hour_length = 1000 * 60 * 60;  // in milliseconds
     for (let i = 0; i < 5; i++) {
         const meeting_time = second_tuesday_of(london_now.getFullYear(), london_now.getMonth() + i);
-        meeting_time.setUTCHours(17);  // meeting starts at 17:00
+        meeting_time.setUTCHours(16);  // meeting starts at 16:00
         if ((meeting_time.valueOf() + hour_length) < london_now.valueOf())
             continue;  // this may happen in the first month
 
