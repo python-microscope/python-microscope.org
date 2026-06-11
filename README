@@ -1,7 +1,7 @@
 # python-microscope.org
 
 This is the code for the site at python-microscope.org.  It includes
-the shinx template, theme, and art but little of its actual content.
+the sphinx template, theme, and art but little of its actual content.
 The real documentation content is mostly on the python microscope
 repository.
 
